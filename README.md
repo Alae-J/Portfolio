@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Alae Eddine Jahid — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio — a fully custom-built site showcasing my projects, skills, and passion for software engineering.
 
-Currently, two official plugins are available:
+Built from scratch using **React + TypeScript + Tailwind CSS + React Router**, this portfolio reflects both my technical abilities and design sensibility.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React (w/ Vite)
+- 🧠 TypeScript
+- 🎨 Tailwind CSS
+- 🌐 React Router
+- 💡 Framer Motion (animations)
+- 🌑 Dark mode support (custom theme)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📁 Project Structure
+
+```bash
+src/
+├── components/       # UI elements (atoms, molecules, organisms)
+├── sections/         # Page sections (Hero, About, Projects, Contact)
+├── routes/           # Routing logic
+├── context/          # Theme / nav context (optional)
+├── App.tsx           # Layout wrapper
+├── main.tsx          # App entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌍 Live Demo
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+> 🗪 Deploying soon...  
+> ✅ Will be available at: [alae.dev](https://alae.dev) or [alae-jahid.vercel.app](https://alae-jahid.vercel.app)
+
+---
+
+## 📸 Featured Projects
+
+| Project         | Tech Stack               | Description                                |
+|-----------------|--------------------------|--------------------------------------------|
+| 🧠 Toki        | React + Spring Boot      | Smart task manager w/ Pomodoro integration |
+| 🎮 Unity Sim   | Unity + C#               | Moroccan-themed immersive sim (academic)   |
+| 💼 Freelance API | Node.js + PostgreSQL     | Lightweight backend for client services    |
+
+---
+
+## 📢 Contact
+
+If you're a recruiter, collaborator, or just curious — feel free to reach out!
+
+- 📧 Email: alae.jahid.dev [@] gmail.com
+- 🧑‍💼 [LinkedIn](https://linkedin.com/in/Alae-J)
+- 💻 [GitHub](https://github.com/Alae-J)
+
+---
+
+## 📝 License
+
+This project is open-source and free to use.  
+Feel free to fork it for your own portfolio (with credit appreciated 💖).
+
