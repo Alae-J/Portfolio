@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef } from 'react';
 import { NavWrapper, StyledIcon } from './navigation.styles';
-import { ReactComponent as LogoIcon } from 'assets/logoIcon/logo.svg';
+import LogoIcon from 'assets/logoIcon/logo.svg?react';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
 import NavList from 'components/molecules/navList/navList';
 import { useContext } from 'react';
@@ -27,7 +27,7 @@ const Nav: FC = () => {
     });
     t1.play();
   }, [refLogo]);
-  
+
   const { store, setStore } = useContext(AppContext);
 
   return (

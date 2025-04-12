@@ -4,5 +4,7 @@ import { theme } from './assets/globalStyles/theme';
 type AppTheme = typeof theme;
 
 declare module 'styled-components' {
-    export interface DefaultTheme extends AppTheme {}
+    export interface DefaultTheme extends AppTheme {
+        _dummy?: never;
+    }
 }

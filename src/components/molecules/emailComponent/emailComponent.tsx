@@ -4,7 +4,7 @@ import { Wrapper } from './emailComponent.styles';
 import { EmailProps } from './emailComponent.types';
 import AppContext from 'context';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
-import { ReactComponent as ContactIcon } from 'assets/navIcons/contact.svg';
+import ContactIcon from 'assets/navIcons/contact.svg?react';
 
 const EmailComponent: FC<EmailProps> = ({ refEmail }) => {
     const {
