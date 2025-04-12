@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import Text from 'components/atoms/text/text';
 import {
     mainContentDataFontSize,
@@ -42,33 +42,34 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
             <ContentTemplate refContent={refContent}>
                 {children}
                 {content.map((item, i) => (
-                <Text
-                    pointer={pointer}
-                    content={item}
-                    key={item}
-                    fontWeight={mainContentDataFontWight[i]}
-                    fontSize={mainContentDataFontSize[i]}
-                    margin={10}
-                    background={
-                    item === 'WEB DEVELOPER' ||
-                    item === 'Pobierz CV' ||
-                    item === '500 239 053'
-                        ? true
-                        : false
-                    }
-                    center={
-                    item === 'WEB DEVELOPER' ||
-                    item === 'Pobierz CV' ||
-                    item === '500 239 053'
-                        ? true
-                        : false
-                    }
-                    click={() => {
-                    if (item === 'Pobierz CV') {
-                        window.open('resume/cv1.pdf', '_black');
-                    }
-                    }}
-                />
+                    <Text
+                        pointer={pointer}
+                        content={item}
+                        key={item}
+                        fontWeight={mainContentDataFontWight[i]}
+                        fontSize={mainContentDataFontSize[i]}
+                        margin={10}
+                        background={
+                            item === 'Full Stack Developer · React & Spring Enthusiast' ||
+                            item === 'Download CV' ||
+                            item === '+212 7 02 08 45 35'
+                                ? true
+                                : false
+                        }
+                        center={
+                            item === 'Full Stack Developer · React & Spring Enthusiast' ||
+                            item === 'Download CV' ||
+                            item === '+212 7 02 08 45 35'
+                                ? true
+                                : false
+                            }
+                            click={() => {
+                                if (item === 'Download CV') {
+                                    window.open('resume/cv1.pdf', '_black');
+                                }
+                            }
+                        }
+                    />
                 ))}
             </ContentTemplate>
             {mail ? (

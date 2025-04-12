@@ -29,7 +29,7 @@ export const developer = [
     'Full Stack Developer · React & Spring Enthusiast'
 ];
 
-export const cv = ['Pobierz CV'];
+export const cv = ['Download CV'];
 
 export const phoneNumber = [
     'SALAM, I’m ALAE',
