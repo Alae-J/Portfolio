@@ -5,23 +5,28 @@ import HtmlIcon from 'assets/techIcons/html-5.svg?react';
 import JsIcon from 'assets/techIcons/js.svg?react';
 import CssIcon from 'assets/techIcons/css.svg?react';
 import TypescriptIcon from 'assets/techIcons/typescript.svg?react';
-import SassIcon from 'assets/techIcons/sass.svg?react';
-import ReactIcon from 'assets/techIcons/React.svg?react';
+import TailwindIcon from 'assets/techIcons/tailwind.svg?react';
+import StyledComponents from 'assets/techIcons/styledcomponents.svg?react';
+import SpringIcon from 'assets/techIcons/springboot.svg?react';
+import NodeIcon from 'assets/techIcons/nodejs.svg?react';
+import ExpressIcon from 'assets/techIcons/expressjs.svg?react';
+import RestApiIcon from 'assets/techIcons/restfulapis.svg?react';
+import JwtIcon from 'assets/techIcons/jwt.svg?react';
+import BcryptIcon from 'assets/techIcons/bcrypt.svg?react';
+import NodemonIcon from 'assets/techIcons/nodemon.svg?react';
+import PrismaIcon from 'assets/techIcons/prisma.svg?react';
 import AboutIcon from 'assets/navIcons/about.svg?react';
 import ContactIcon from 'assets/navIcons/contact.svg?react';
 import CVIcon from 'assets/navIcons/cv.svg?react';
 import ProjectIcon from 'assets/navIcons/project.svg?react';
 import SkillIcon from 'assets/navIcons/skill.svg?react';
 
-import ItSpa from 'assets/projects/ItSpa.png';
-import MemoryGame from 'assets/projects/MemoryGame.png';
 import nativeMems from 'assets/projects/nativeMems.png';
 import OrgenizerApp from 'assets/projects/OrganizerApp.png';
 import Portfolio from 'assets/projects/Portfolio.png';
-import ShopProject from 'assets/projects/ShopProject.png';
-import WeatherApp from 'assets/projects/WeatherApp.png';
 import Physiotherapist from 'assets/projects/fizjo.png';
-
+// Tailwind CSS',
+    //'Styled-Components'
 // Content Data for Main Page template
 export const developer = [
     'SALAM, I’m ALAE',
@@ -62,10 +67,9 @@ export const NavIcons = [
     CVIcon
 ];
 // Social Network data
-export const SocialNetworkIcon = [Face, Github, Linkedin];
+export const SocialNetworkIcon = [Github, Linkedin];
 
 export const SocialNetworkUrl = [
-    'https://www.facebook.com/mgrzejszczyk/', // to edit !!!!!
     'https://github.com/Alae-J',
     'https://www.linkedin.com/in/alae-j/'
 ];
@@ -102,6 +106,27 @@ export const skillsCategories = [
     'TOOLS & DEV EXPERIENCE',
     'DEPLOYMENT & CLOUD'
 ];
+
+export const techIconsMap: Record<string, Record<string, React.FC>> = {
+    'FRONTEND ESSENTIALS': {
+        'HTML5': HtmlIcon,
+        'CSS3': CssIcon,
+        'JavaScript (ES6+)': JsIcon,
+        'TypeScript': TypescriptIcon,
+        'Tailwind CSS': TailwindIcon,
+        'Styled-Components': StyledComponents,
+    },
+    'BACKEND & SERVER': {
+        'Spring Boot': SpringIcon,
+        'Node.js': NodeIcon,
+        'Express.js': ExpressIcon,
+        'RESTful APIs': RestApiIcon,
+        'JWT Authentication': JwtIcon,
+        'Bcrypt': BcryptIcon,
+        'Nodemon': NodemonIcon,
+        'Prisma': PrismaIcon,
+    },
+};
 
 export const frontendEssentialsSkills = [
     'HTML5',
@@ -174,16 +199,6 @@ export const cloudSkills = [
     'Render (Docker)'
 ];
 
-
-
-export const techIcons = [
-    HtmlIcon,
-    CssIcon,
-    JsIcon,
-    TypescriptIcon,
-    ReactIcon
-];
-
 export const skills = [
     frontendEssentialsSkills,
     reactEcosystemSkills,
@@ -198,46 +213,30 @@ export const skills = [
 
 
 // Projects Data
-
 export const ProjectMiniatures = [
     Portfolio,
     Physiotherapist,
     nativeMems,
-    OrgenizerApp,
-    ShopProject,
-    MemoryGame,
-    ItSpa,
-    WeatherApp,
+    OrgenizerApp
 ];
 
 export const ProjectsUrl = [
-    'https://github.com/Mattdev92/MatDevPortfolio',
-    'https://github.com/Mattdev92/PhysiotherapyPortfoliio',
-    'https://github.com/Mattdev92/NativeMems',
-    'https://github.com/Mattdev92/Fullstack_organizer_app',
-    'https://github.com/Mattdev92/Shop-project',
-    'https://github.com/Mattdev92/Memory_game',
-    'https://github.com/Mattdev92/IT_SPA_PROJECT_1',
-    'https://github.com/Mattdev92/Weather-app',
+    'https://github.com/Alae-J/Toki',
+    'https://github.com/Alae-J/portfolio',
+    'https://github.com/Alae-J/Hassan-Tower-VR',
+    'https://github.com/Alae-J/JavaFX-Student-Advisor'
 ];
+
 export const ProjectTitles = [
-    'My Frontend Portfolio',
-    'Physiotherapist webpage',
-    'Funny MEMs - native',
-    'Organizer Fullstack App',
-    'Ecommerce shop',
-    'Memory Game',
-    'SPA',
-    'Weather App',
+    'Toki · Task Manager + Pomodoro',
+    'My Developer Portfolio',
+    'Hassan Tower VR · Unity Simulation',
+    'Student Advisor · JavaFX Desktop App'
 ];
 
 export const ProjectDescription = [
-    'My Developer Portfolio presenting skills, projects and a little about me. Tech stack: React, Typescript, React Router, React hooks, Context, Styled Components',
-    'First commarcial Project created for proffessional Physiotherapist. Tech stack: React, Typescript, React Router, React hooks, Context, Styled Components',
-    'Native app with funny Mems. Mems are downloaded form DatoCMS and present on mobile App. You can upvote or downvote each Mem to categorize them. Tech stack: React, React Native, Typescript, React Router, React hooks, Redux Toolkit, Styled Components, GraphQl, DatoCMS',
-    'Fullstack organizer app to categorize your tasks. App is connected with Mongo database. You can create your own user and login any time to see what you have to do. Project is based on Express and React. Tech stack: React, Express, Typescript, React Router, React Bootstrap',
-    'E-commerce website simulated real shop with all user funcionalities. You can add any of product to cart, change quantity and make an order. Tech stack: React with class components (without hooks), Redux, GSAP, React Router',
-    'Game is based on tradition rule to match pair of identical cards. You can see if your memory is better than your friends. Yout time will be recorded and present in case of match all pairs. Tech stack: React, Redux, Bulma, SCSS',
-    `It's my first diploma project which I' he prepared for my postgraduate studies "frontend with React". This project was prepared using vanilla js without any js framework. Tech stack: Vanilla js, SCSS, Json server, axios, uuid, prettier, eslint`,
-    `Weather app witch real time weather forecast. Webpage is connected to OpenWeather api. You can find any city and forecast to next 7 days in real time. Tech stack: React, Typescript, Axios, Redux`,
+    `A productivity-focused task manager featuring a fully working Pomodoro system, session stats, real-time timers, progress tracking, and a clean modular interface. Built from scratch with React, TypeScript, and Spring Boot.`,
+    `My custom-designed developer portfolio showcasing skills, projects, and personality. Crafted with React, styled-components, animations, and a mobile-responsive layout. Emphasis on clean structure and user-centric design.`,
+    `A first-person Unity experience simulating the iconic Moroccan heritage site Hassan Tower. Includes atmospheric visuals, keyboard navigation, object interaction (pick/drop/read), and cultural storytelling.`,
+    `A desktop application helping students choose the ideal academic path. Users input grades and preferences, and receive tailored institution/major suggestions. Built using JavaFX and MySQL.`
 ];

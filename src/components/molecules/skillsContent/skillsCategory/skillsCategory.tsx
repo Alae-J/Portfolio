@@ -9,13 +9,15 @@ import Text from 'components/atoms/text/text';
 import PseudoCode from '../pseudoCode/pseudoCode';
 import { SkillsProps } from './skillsCategory.types';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
-import { techIcons } from 'helpers/helpers';
+import { techIconsMap } from 'helpers/helpers';
 import AppContext from 'context';
 
 const SkillsCategory: FC<SkillsProps> = ({ $skill, $category, $refSkill }) => {
     const {
         store: { actualScreenWidth },
     } = useContext(AppContext);
+
+    const iconsMap = techIconsMap[$category] || {};
 
     return (
         <Wrapper ref={$refSkill}>
@@ -31,23 +33,22 @@ const SkillsCategory: FC<SkillsProps> = ({ $skill, $category, $refSkill }) => {
                 />
             </TitleWrapper>
             <SkillsWrapper>
-                {$skill.map((item, i) => {
-                return (
-                    <TextWrapper key={item}>
-                    <Text
-                        $center
-                        $fontSize={'XS'}
-                        $fontWeight={
-                            actualScreenWidth < 700 || window.innerWidth < 700 ? 'S' : 'M'
-                        }
-                        $margin={5}
-                        content={item}
-                    />{' '}
-                    {$category === `'FRONTEND ESSENTIALS'>` && (
-                        <SvgIcon Icon={techIcons[i]} $width={43} $height={43} />
-                    )}
-                    </TextWrapper>
-                );
+                {$skill.map((item) => {
+                    const Icon = iconsMap[item];
+                    return (
+                        <TextWrapper key={item}>
+                        <Text
+                            $center
+                            $fontSize={'XS'}
+                            $fontWeight={
+                                actualScreenWidth < 700 || window.innerWidth < 700 ? 'S' : 'M'
+                            }
+                            $margin={5}
+                            content={item}
+                        />{' '}
+                        {Icon && <SvgIcon Icon={Icon} $width={43} $height={43} />}
+                        </TextWrapper>
+                    );
                 })}
             </SkillsWrapper>
         </Wrapper>

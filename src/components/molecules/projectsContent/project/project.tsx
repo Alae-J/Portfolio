@@ -20,7 +20,7 @@ const Project: FC<ProjectProps> = ({
     const [showDescription, setShowDescription] = useState(false);
     return (
         <MainWrapper>
-            <h1 style={{ fontFamily: "'Encode Sans SC', sans-serif", fontSize: '2em' }}>{title}</h1>
+            <h1 style={{ fontFamily: "'Encode Sans SC', sans-serif", fontSize: '1.4em' }}>{title}</h1>
             <ProjectWrapper
                 ref={refproject}
                 onMouseLeave={(e) => {
