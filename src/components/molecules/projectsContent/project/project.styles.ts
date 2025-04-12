@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { DescriptionProps } from './project.types';
 
 export const ProjectWrapper = styled.div`
+    position: relative;
     text-decoration: none;
     height: 400px;
     width: 400px;

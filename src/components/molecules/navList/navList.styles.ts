@@ -19,7 +19,6 @@ export const StyledIcon = styled.span`
 
 export const StyledLink = styled(NavLink)`
     position: relative;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,34 +26,28 @@ export const StyledLink = styled(NavLink)`
     text-decoration: none;
     color: black;
     margin: 15px 0;
-    &.active {
-        &:before {
-            content: '';
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            top: 60px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 30px;
-            width: 50%;
-            border-bottom: 1px solid black;
-        }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -6px; /* visible under the icon */
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        width: 50%;
+        height: 2px;
+        background-color: black;
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out;
     }
-    @media (max-width: 1440px) {
-        margin: 10px 0;
-        &.active {
-            &:before {
-                top: 40px;
-            }
-        }
+
+    &.active::before {
+        transform: translateX(-50%) scaleX(1);
     }
+
     @media (max-width: 580px) {
-        &.active {
-            &:before {
-                content: '';
-                border: none;
-            }
+        &::before {
+            display: none;
         }
     }
 `;
+

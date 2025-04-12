@@ -1,6 +1,6 @@
 export interface ProjectProps {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    refProject: React.RefObject<any>;
+    refproject: React.RefObject<any>;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     image: any;
     content: string;
@@ -8,5 +8,5 @@ export interface ProjectProps {
     title: string;
 }
 export interface DescriptionProps {
-    $show: boolean;
+    show: boolean;
 }

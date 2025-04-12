@@ -15,4 +15,10 @@ body {
         margin:0;
     }
 }
+
+    /* Firefox support */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: ${({ theme }) => theme.colors.helper} #f8fbff;
+    }
 `;

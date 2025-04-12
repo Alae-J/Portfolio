@@ -43,16 +43,14 @@ export const Navdata = [
     'PROJECTS',
     'SKILLS',
     'CONTACT',
-    'CV',
-    'ARCHIVE'
+    'CV'
 ];
 export const Url = [
     '/about',
     '/projects',
     '/skills',
     '/contact',
-    '/CV',
-    '/completed'
+    '/CV'
 ];
 
 
@@ -61,8 +59,7 @@ export const NavIcons = [
     ProjectIcon,
     SkillIcon,
     ContactIcon,
-    CVIcon,
-    ProjectIcon,
+    CVIcon
 ];
 // Social Network data
 export const SocialNetworkIcon = [Face, Github, Linkedin];
@@ -89,106 +86,116 @@ export const aboutContentData = [
 
 // Pseudo Code data
 export const pseudoCodeMain = ['<toki-dev>', '</toki-dev>'];
-export const pseudoCodeSection = ['<section class=', '</section>'];
+export const pseudoCodeSection = ['<Section>', '</Section>'];
 
 // ------------------------- TO EDIT THIS ------------------------------
 
 // Skills data
 export const skillsCategories = [
-    `'FRONTEND ESSENTIALS'>`,
-    `'FRONTEND LIBRARIES'>`,
-    `'MOBILE DEVELOPMENT'>`,
-    `'BACKEND LANGUAGES'>`,
-    `'BACKEND LIBRARIES'>`,
-    `'CMS & DATABASE & external platforms'>`,
-    `'TOOLS'>`,
-    'CLOUD INFRASTRUCTURE',
+    'FRONTEND ESSENTIALS',
+    'REACT ECOSYSTEM',
+    'MOBILE DEVELOPMENT',
+    'BACKEND & SERVER',
+    'DATABASES',
+    'GAME DEVELOPMENT',
+    'PROGRAMMING LANGUAGES',
+    'TOOLS & DEV EXPERIENCE',
+    'DEPLOYMENT & CLOUD'
 ];
 
 export const frontendEssentialsSkills = [
     'HTML5',
     'CSS3',
-    'JS',
+    'JavaScript (ES6+)',
     'TypeScript',
+    'Tailwind CSS',
+    'Styled-Components'
+];
+
+export const reactEcosystemSkills = [
     'React',
-    'Sass',
-];
-
-export const backendsSkills = ['NODE JS', 'C++'];
-
-export const reactSkills = [
     'React Router',
-    'React Redux',
     'React Hooks',
-    'Jest & React testing library',
-    'Redux',
-    'Redux Toolkit',
-    'Redux Thunk',
-    'MobX',
-    'Styled Components',
-    'React Bootstrap',
-    'Material UI',
-    'GSAP',
+    'LocalStorage',
     'Axios',
-    'Apollo',
-    'Rest',
-    'GraphQL',
-    'LocaStorage',
-    'Json server',
-    'Formik',
+    'GSAP',
+    'Formik'
 ];
 
-export const mobileDevelopment = [
-    'React Native',
-    'React Navigation',
-    'React ReduxNative Debugger',
+export const mobileDevelopmentSkills = [
+    'Flutter'
 ];
 
-export const backendFrameworks = [
-    'Express',
+export const backendServerSkills = [
+    'Spring Boot',
+    'Node.js',
+    'Express.js',
+    'RESTful APIs',
+    'JWT Authentication',
     'Bcrypt',
-    'JWT',
     'Nodemon',
-    'Mongoose',
+    'Prisma'
 ];
 
-export const platformsSkills = ['DatoCMS', 'MongoDB', 'Netlify'];
+export const databaseSkills = [
+    'MySQL',
+    'PostgreSQL',
+    'MongoDB',
+    'H2',
+    'Mongoose'
+];
+
+export const gameDevSkills = [
+    'Unity',
+    'C#'
+];
+
+export const programmingLanguages = [
+    'Java',
+    'JavaScript',
+    'TypeScript',
+    'Python',
+    'C',
+    'C#'
+];
 
 export const toolsSkills = [
-    'Git&Github',
-    'Npm',
-    'Webpack&Babel',
+    'Git & GitHub',
+    'NPM',
     'VS Code',
-    'Devtools',
-    'AdobeXD',
     'Figma',
-    'Slack',
+    'DaVinci Resolve',
+    'Linux'
 ];
+
 export const cloudSkills = [
-    'Azure Devops',
-    'Azure Boards - Agile',
-    'Azure Pipelines',
+    'Netlify',
+    'PostgreSQL on Neon',
+    'Render (Docker)'
 ];
+
+
 
 export const techIcons = [
     HtmlIcon,
     CssIcon,
     JsIcon,
     TypescriptIcon,
-    ReactIcon,
-    SassIcon,
+    ReactIcon
 ];
 
 export const skills = [
     frontendEssentialsSkills,
-    reactSkills,
-    mobileDevelopment,
-    backendsSkills,
-    backendFrameworks,
-    platformsSkills,
+    reactEcosystemSkills,
+    mobileDevelopmentSkills,
+    backendServerSkills,
+    databaseSkills,
+    gameDevSkills,
+    programmingLanguages,
     toolsSkills,
-    cloudSkills,
+    cloudSkills
 ];
+
 
 // Projects Data
 

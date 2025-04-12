@@ -40,7 +40,7 @@ const ProjectsContent = ({
         <ContentWrapper>
             {ProjectMiniatures.map((item, i) => (
                 <Project
-                    refProject={refTab.current[i]}
+                    refproject={refTab.current[i]}
                     key={item}
                     image={item}
                     content={ProjectDescription[i]}

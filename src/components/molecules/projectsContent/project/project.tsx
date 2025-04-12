@@ -11,7 +11,7 @@ import Button from 'components/atoms/button/button';
 import { MainWrapper } from './project.styles';
 
 const Project: FC<ProjectProps> = ({
-    refProject,
+    refproject,
     image,
     content,
     link,
@@ -20,9 +20,9 @@ const Project: FC<ProjectProps> = ({
     const [showDescription, setShowDescription] = useState(false);
     return (
         <MainWrapper>
-            <h1>{title}</h1>
+            <h1 style={{ fontFamily: "'Encode Sans SC', sans-serif", fontSize: '2em' }}>{title}</h1>
             <ProjectWrapper
-                ref={refProject}
+                ref={refproject}
                 onMouseLeave={(e) => {
                     if (window.innerWidth > 580) {
                         e.stopPropagation();
@@ -43,7 +43,7 @@ const Project: FC<ProjectProps> = ({
                     }}
                     onClick={() => setShowDescription(true)}
                 />
-                <ContentWrapper $show={showDescription}>
+                <ContentWrapper show={showDescription}>
                     <h2>{title}</h2>
                     {showDescription && content}
                     <StyledLink href={link}>
