@@ -27,17 +27,16 @@ const Nav: FC = () => {
     });
     t1.play();
   }, [refLogo]);
-  const {
-    store: { mobileNav },
-    setStore,
-  } = useContext(AppContext);
+  
+  const { store, setStore } = useContext(AppContext);
 
   return (
     <NavWrapper
-      mobile={mobileNav}
+      mobile={store.mobileNav}
       onClick={() => {
         setStore({
-          mobileNav: false,
+          ...store,
+          mobileNav: false
         });
       }}
     >
