@@ -43,12 +43,12 @@ const Project: FC<ProjectProps> = ({
                     }}
                     onClick={() => setShowDescription(true)}
                 />
-                <ContentWrapper show={showDescription}>
-                <h2>{title}</h2>
-                {showDescription && content}
-                <StyledLink href={link}>
-                    {showDescription && <Button content="GITHUB" />}
-                </StyledLink>
+                <ContentWrapper $show={showDescription}>
+                    <h2>{title}</h2>
+                    {showDescription && content}
+                    <StyledLink href={link}>
+                        {showDescription && <Button content="GITHUB" />}
+                    </StyledLink>
                 </ContentWrapper>
             </ProjectWrapper>
         </MainWrapper>

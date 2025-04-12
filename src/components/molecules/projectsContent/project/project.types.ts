@@ -8,5 +8,5 @@ export interface ProjectProps {
     title: string;
 }
 export interface DescriptionProps {
-    show: boolean;
+    $show: boolean;
 }

@@ -31,9 +31,8 @@ export interface StyleClosetTheme {
 
 export const theme: StyleClosetTheme = {
     colors: {
-        // main: 'rgb(41,42,44)',
-        main: 'rgba(255, 211, 80, 0.7)',
-        mobile: 'rgba(255, 211, 80, 1)',
+        main: 'rgba(0, 197, 66, 0.7)',
+        mobile: 'rgb(27, 209, 81)',
         content: '#F8FBFF',
         helper: '#4caf50',
     },

@@ -8,8 +8,8 @@ export const NavWrapper = styled.nav<NavigationWrapperProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: ${({ theme, mobile }) =>
-        mobile ? theme.colors.mobile : theme.colors.main};
+    background: ${({ theme, $mobile }) =>
+        $mobile ? theme.colors.mobile : theme.colors.main};
     grid-column: 1/3;
     grid-row: 1/4;
     width: auto;
@@ -18,8 +18,8 @@ export const NavWrapper = styled.nav<NavigationWrapperProps>`
         justify-content: center;
     }
     @media (max-width: 580px) {
-        transform: ${({ mobile }) =>
-            mobile ? 'translateX(0)' : 'translateX(-300px)'};
+        transform: ${({ $mobile }) =>
+            $mobile ? 'translateX(0)' : 'translateX(-300px)'};
         justify-content: space-evenly;
         position: fixed;
         top: 0;

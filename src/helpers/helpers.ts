@@ -70,7 +70,7 @@ export const SocialNetworkIcon = [Face, Github, Linkedin];
 export const SocialNetworkUrl = [
     'https://www.facebook.com/mgrzejszczyk/', // to edit !!!!!
     'https://github.com/Alae-J',
-    'https://www.linkedin.com/in/alae-j/',
+    'https://www.linkedin.com/in/alae-j/'
 ];
 
 // Main Page Template Data
@@ -89,7 +89,7 @@ export const aboutContentData = [
 
 // Pseudo Code data
 export const pseudoCodeMain = ['<toki-dev>', '</toki-dev>'];
-export const pseudoCodeSection = ['<focus-mode>', '</focus-mode>'];
+export const pseudoCodeSection = ['<section class=', '</section>'];
 
 // ------------------------- TO EDIT THIS ------------------------------
 

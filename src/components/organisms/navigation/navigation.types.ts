@@ -1,3 +1,3 @@
 export interface NavigationWrapperProps {
-    mobile: boolean;
+    $mobile: boolean;
 }

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useRef } from 'react';
 import Text from 'components/atoms/text/text';
 import {
     mainContentDataFontSize,
@@ -8,8 +8,8 @@ import ContentTemplate from 'templates/contentTemplate/contentTemplate';
 import { MainPageTemplateProps } from './mainPageContent.types';
 import MainTemplate from 'templates/mainTemplate/mainTemplate';
 import SpecialTextContainer from 'components/molecules/quoteText/quoteText';
-import gsap from 'gsap';
-import { Power0 } from 'gsap';
+// import gsap from 'gsap';
+// import { Power0 } from 'gsap';
 import EmailComponent from 'components/molecules/emailComponent/emailComponent';
 
 const MainPageTemplate: FC<MainPageTemplateProps> = ({
@@ -20,22 +20,28 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
 }) => {
     const refContent = useRef(null);
     const refSpecialText = useRef(null);
-    useEffect(() => {
-        const contentTimeline = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-        contentTimeline.from(refContent.current, {
-            opacity: 0,
-            ease: Power0.easeOut,
-            duration: 1,
-            delay: 0.2,
-        });
-        contentTimeline.from(refSpecialText.current, {
-            opacity: 0,
-            ease: Power0.easeOut,
-            duration: 1,
-            delay: 0.3,
-        });
-        contentTimeline.play();
-    }, [refContent]);
+    // useEffect(() => {
+    //     if (!refContent.current) return;
+    
+    //     gsap.from(refContent.current, {
+    //         opacity: 0,
+    //         ease: Power0.easeOut,
+    //         duration: 1,
+    //         delay: 0.5
+    //     });
+    // }, []);
+    
+    // useEffect(() => {
+    //     if (!refSpecialText.current) return;
+    
+    //     gsap.from(refSpecialText.current, {
+    //         opacity: 0,
+    //         ease: Power0.easeOut,
+    //         duration: 1,
+    //         delay: 0.5
+    //     });
+    // }, []);
+    
 
     return (
         <MainTemplate>
@@ -43,27 +49,27 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
                 {children}
                 {content.map((item, i) => (
                     <Text
-                        pointer={pointer}
+                        $pointer={pointer}
                         content={item}
                         key={item}
-                        fontWeight={mainContentDataFontWight[i]}
-                        fontSize={mainContentDataFontSize[i]}
-                        margin={10}
-                        background={
+                        $fontWeight={mainContentDataFontWight[i]}
+                        $fontSize={mainContentDataFontSize[i]}
+                        $margin={10}
+                        $background={
                             item === 'Full Stack Developer · React & Spring Enthusiast' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
                                 ? true
                                 : false
                         }
-                        center={
+                        $center={
                             item === 'Full Stack Developer · React & Spring Enthusiast' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
                                 ? true
                                 : false
                             }
-                            click={() => {
+                            $click={() => {
                                 if (item === 'Download CV') {
                                     window.open('resume/cv1.pdf', '_black');
                                 }
@@ -73,9 +79,9 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
                 ))}
             </ContentTemplate>
             {mail ? (
-                <EmailComponent refEmail={refSpecialText} />
+                <EmailComponent $refEmail={refSpecialText} />
             ) : (
-                <SpecialTextContainer refSpcialText={refSpecialText} />
+                <SpecialTextContainer $refSpecialText={refSpecialText} />
             )}
         </MainTemplate>
     );

@@ -6,26 +6,26 @@ import { StyledLink } from './navList.styles';
 import { NavListProps } from './navList.types';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
 
-const NavList: FC<NavListProps> = ({ refNav }) => {
+const NavList: FC<NavListProps> = ({ $refNav }) => {
     return (
-        <ListWrapper ref={refNav}>
+        <ListWrapper ref={$refNav}>
             {Navdata.map((item, i: number) => (
                 <StyledLink to={Url[i]} key={i}>
                     <StyledIcon>
                         <SvgIcon
                             Icon={NavIcons[i]}
-                            width={window.innerWidth < 1440 ? 35 : 40}
-                            height={window.innerWidth < 1440 ? 35 : 40}
+                            $width={window.innerWidth < 1440 ? 35 : 40}
+                            $height={window.innerWidth < 1440 ? 35 : 40}
                         />
                     </StyledIcon>
                     <StyledText>
                         <Text
                             content={item}
                             key={item}
-                            fontSize={window.innerHeight < 800 ? 'XS' : 'S'}
-                            fontWeight={'S'}
-                            margin={0}
-                            pointer={true}
+                            $fontSize={window.innerHeight < 800 ? 'XS' : 'S'}
+                            $fontWeight={'S'}
+                            $margin={0}
+                            $pointer={true}
                         />
                     </StyledText>
                 </StyledLink>

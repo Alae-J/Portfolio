@@ -2,10 +2,9 @@ import { FC } from 'react';
 import { SvgContainer } from './svgIcon.styles';
 import { SvgIconProps } from './svgIcon.types';
 
-const SvgIcon: FC<SvgIconProps> = (props) => {
-    const { Icon } = props;
+const SvgIcon: FC<SvgIconProps> = ({ Icon, $width, $height }) => {
     return (
-        <SvgContainer {...props}>
+        <SvgContainer $width={$width} $height={$height}>
             <Icon style={{ maxHeight: '100%', maxWidth: '100%' }} />
         </SvgContainer>
     );

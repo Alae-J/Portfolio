@@ -9,8 +9,8 @@ export const Wrapper = styled.div<WrapperProps>`
     grid-row: 1 / 2;
     align-self: start;
     height: 80px;
-    background: ${({ scrollBackground, theme }) =>
-        scrollBackground === true ? theme.colors.main : 'none'};
+    background: ${({ scrollbackground, theme }) =>
+        scrollbackground === true ? theme.colors.main : 'none'};
     z-index: 1;
     width: 100%;
     border-radius: 5px;

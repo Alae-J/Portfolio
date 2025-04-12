@@ -9,11 +9,11 @@ const PseudoCode: FC = () => {
             {pseudoCodeSection.map((item) => (
                 <Text
                     content={item}
-                    fontSize={'XXS'}
-                    fontWeight={'XS'}
-                    margin={0}
-                    color={'blue'}
-                    marginLeft={5}
+                    $fontSize={'XXS'}
+                    $fontWeight={'XS'}
+                    $margin={0}
+                    $color={'blue'}
+                    $marginLeft={5}
                     key={item}
                 />
             ))}

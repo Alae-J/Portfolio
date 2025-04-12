@@ -7,9 +7,10 @@ import AppContext from 'context';
 
 const SocialNetworkIcons: FC = () => {
     const [scrollBackground, setScrollBackround] = useState(false);
-    const RefElement = useRef(null);
+    const $RefElement = useRef(null);
     const { store, setStore } = useContext(AppContext);
     useEffect(() => {
+        if (!$RefElement.current) return;
         const handleScroll = () => {
             setScrollBackround(true);
         };
@@ -18,12 +19,12 @@ const SocialNetworkIcons: FC = () => {
     }, []);
 
     return (
-        <Wrapper scrollBackground={scrollBackground} ref={RefElement}>
+        <Wrapper scrollbackground={scrollBackground} ref={$RefElement}>
             <IconWrapper>
                 <BurgerMenu onClick={() => setStore({ ...store, mobileNav: true })} />
                 {SocialNetworkIcon.map((item, i) => (
                     <StyledIcon href={SocialNetworkUrl[i]} key={i}>
-                        <SvgIcon Icon={item} height={25} width={25} />
+                        <SvgIcon Icon={item} $height={25} $width={25} />
                     </StyledIcon>
                 ))}
             </IconWrapper>
