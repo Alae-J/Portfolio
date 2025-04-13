@@ -1,65 +1,102 @@
-# 🧑‍💻 Alae Eddine Jahid — Portfolio
+# ✨ Alae Eddine Jahid — Developer Portfolio
 
-Welcome to my personal developer portfolio — a fully custom-built site showcasing my projects, skills, and passion for software engineering.
+Welcome to my personalized developer portfolio — a clean, structured, and responsive website showcasing who I am, what I build, and how I think.
 
-Built from scratch using **React + TypeScript + Tailwind CSS + React Router**, this portfolio reflects both my technical abilities and design sensibility.
-
----
-
-## 🚀 Tech Stack
-
-- ⚛️ React (w/ Vite)
-- 🧠 TypeScript
-- 🎨 Tailwind CSS
-- 🌐 React Router
-- 💡 Framer Motion (animations)
-- 🌑 Dark mode support (custom theme)
+> Designed with intention, engineered with clarity, and structured to scale.
 
 ---
 
-## 📁 Project Structure
+## 📄 Overview
+
+This portfolio reflects my developer identity — built using a base template, but **deeply refactored** and **modularized** to fit my standards. I focused on structured thinking, clarity of purpose, and frontend architecture inspired by Atomic Design.
+
+---
+
+## 💡 Features
+
+- Modular codebase using **.tsx**, **.styles.ts**, and **.types.ts** conventions
+- **Atomic Design** system: atoms → molecules → organisms → templates → views
+- Fully **responsive** layout, optimized for both desktop and mobile
+- Organized project sections with GitHub source code links
+
+---
+
+## 📚 Tech Stack
+
+- **Framework:** React (with Vite)
+- **Language:** TypeScript
+- **Styling:** styled-components
+- **Routing:** React Router
+
+---
+
+## 📁 Project Structure (Core Highlights)
 
 ```bash
 src/
-├── components/       # UI elements (atoms, molecules, organisms)
-├── sections/         # Page sections (Hero, About, Projects, Contact)
-├── routes/           # Routing logic
-├── context/          # Theme / nav context (optional)
-├── App.tsx           # Layout wrapper
-├── main.tsx          # App entry point
+├── assets/           # Icons, images, and global styles (globalStyles/theme.ts)
+├── components/       # UI atoms, molecules, organisms
+├── context/          # App state (e.g. mobile nav visibility)
+├── helpers/          # Utility functions and reusable logic
+├── root/             # Root layout and shared structural elements
+├── routes/           # Route management
+├── templates/        # Layout & content structure templates
+└── views/            # Full-page views (aboutView, projectsView, etc.)
 ```
 
 ---
 
 ## 🌍 Live Demo
 
-> 🗪 Deploying soon...  
-> ✅ Will be available at: [alae.dev](https://alae.dev) or [alae-jahid.vercel.app](https://alae-jahid.vercel.app)
+> 🔗 Hosted at: [alae-jahid.vercel.app](https://alae-jahid.vercel.app)
+
+Explore it on mobile, tablet, and desktop — it's made to be pixel-consistent across viewports.
 
 ---
 
-## 📸 Featured Projects
+## 🌟 Highlight Projects
 
-| Project         | Tech Stack               | Description                                |
-|-----------------|--------------------------|--------------------------------------------|
-| 🧠 Toki        | React + Spring Boot      | Smart task manager w/ Pomodoro integration |
-| 🎮 Unity Sim   | Unity + C#               | Moroccan-themed immersive sim (academic)   |
-| 💼 Freelance API | Node.js + PostgreSQL     | Lightweight backend for client services    |
+| Project                | Stack                     | Description                                   |
+| ---------------------- | ------------------------- | --------------------------------------------- |
+| 📊 **Toki**            | React + Spring Boot       | Pomodoro task manager with real-time sessions |
+| 🏰 **Hassan Tower VR** | Unity + C#                | Immersive Moroccan heritage site simulation   |
+| 🎓 **Student Advisor** | JavaFX + MySQL            | Academic advisor desktop tool                 |
+| 💼 **Portfolio**       | React + styled-components | This portfolio — modularized and personalized |
 
 ---
 
-## 📢 Contact
+## 🚀 Getting Started
 
-If you're a recruiter, collaborator, or just curious — feel free to reach out!
+Clone the repo and run it locally:
 
-- 📧 Email: alae.jahid.dev [@] gmail.com
-- 🧑‍💼 [LinkedIn](https://linkedin.com/in/Alae-J)
+```bash
+git clone https://github.com/Alae-J/portfolio
+cd portfolio
+npm install
+npm run dev
+```
+
+### Requirements
+
+- Node.js >= 16
+- Vite (for optimal development speed)
+
+---
+
+## 💻 Usage
+
+- Navigate through top bar or scroll through each section
+- Fully responsive — explore across devices
+
+---
+
+## 📲 Contact
+
+- 📧 Email: [alae.jahid.dev@gmail.com](mailto:alae.jahid.dev@gmail.com)
+- 🤝 [LinkedIn](https://linkedin.com/in/Alae-J)
 - 💻 [GitHub](https://github.com/Alae-J)
 
 ---
 
-## 📝 License
-
-This project is open-source and free to use.  
-Feel free to fork it for your own portfolio (with credit appreciated 💖).
+技術 (Gijutsu) meets 美学 (Bigaku): Code meets aesthetics ⚙️
 

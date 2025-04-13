@@ -36,7 +36,7 @@ const AboutContent: FC = () => {
     );
 
     return (
-        <ContentTemplate>
+        <ContentTemplate ref={containerRef}>
             {aboutContentData.map((item, i) => (
                 <Text
                     $refText={refTextTab.current[i]}

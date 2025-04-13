@@ -6,3 +6,7 @@ export interface ContentProps {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     children?: any;
 }
+
+export interface ContentTemplateProps {
+    children?: React.ReactNode;
+}

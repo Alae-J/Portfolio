@@ -19,7 +19,7 @@ const SocialNetworkIcons: FC = () => {
     }, []);
 
     return (
-        <Wrapper scrollbackground={scrollBackground} ref={$RefElement}>
+        <Wrapper $scrollbackground={scrollBackground} ref={$RefElement}>
             <IconWrapper>
                 <BurgerMenu onClick={() => setStore({ ...store, mobileNav: true })} />
                 <SocialIcons>

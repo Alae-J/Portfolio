@@ -1,3 +1,3 @@
 export interface WrapperProps {
-    scrollbackground: boolean;
+    $scrollbackground: boolean;
 }

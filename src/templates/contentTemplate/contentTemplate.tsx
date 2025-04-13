@@ -1,9 +1,12 @@
-import { FC } from 'react';
+// contentTemplate.tsx
+import { forwardRef } from 'react';
 import { ContentWrapper } from './contentTemplate.styles';
-import { ContentProps } from './contentTemplate.types';
+import { ContentTemplateProps } from './contentTemplate.types';
 
-const ContentTemplate: FC<ContentProps> = ({ children, refContent }) => {
-    return <ContentWrapper ref={refContent}>{children}</ContentWrapper>;
-};
+const ContentTemplate = forwardRef<HTMLDivElement, ContentTemplateProps>(
+    ({ children }, ref) => {
+        return <ContentWrapper ref={ref}>{children}</ContentWrapper>;
+    }
+);
 
 export default ContentTemplate;

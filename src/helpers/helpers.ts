@@ -20,10 +20,10 @@ import CVIcon from 'assets/navIcons/cv.svg?react';
 import ProjectIcon from 'assets/navIcons/project.svg?react';
 import SkillIcon from 'assets/navIcons/skill.svg?react';
 
-import nativeMems from 'assets/projects/nativeMems.png';
+import nativeMems from 'assets/projects/HassanSimulation.png';
 import OrgenizerApp from 'assets/projects/OrganizerApp.png';
 import Portfolio from 'assets/projects/Portfolio.png';
-import Physiotherapist from 'assets/projects/fizjo.png';
+import Physiotherapist from 'assets/projects/Toki.png';
 
 
 // Content Data for Main Page template
@@ -81,11 +81,10 @@ export const mainContentDataFontSize = ['M', 'M', 'S'];
 
 // About View Content Data
 export const aboutContentData = [
-    "I'm a software engineering student at INPT with a passion for building clean, purposeful, and scalable applications.",
-    "I started exploring web and mobile development through personal projects, and quickly fell in love with full-stack development — especially React and Spring Boot.",
-    "Beyond just writing code, I’m obsessed with creating systems that work, learning high-leverage tools, and refining the way I think. I'm also deeply drawn to Japanese culture, and I dream of working there one day.",
+    "I'm a software engineering student at INPT, passionate about building smart, efficient, and elegant digital systems.",
+    "From crafting full-stack apps to diving deep into frontend architecture, I love combining React, TypeScript, and Spring Boot to turn ideas into real, working software.",
+    "I think in terms of systems, optimize for impact over effort, and constantly explore tools that unlock higher leverage. Long-term, my dream is to work in Japan — blending technology with cultural authenticity.",
 ];
-
 
 // Pseudo Code data
 export const pseudoCodeMain = ['<toki-dev>', '</toki-dev>'];
@@ -120,7 +119,7 @@ export const techIconsMap: Record<string, Record<string, React.FC>> = {
         'Node.js': NodeIcon,
         'Express.js': ExpressIcon,
         'RESTful APIs': RestApiIcon,
-        'JWT Authentication': JwtIcon,
+        'JWT': JwtIcon,
         'Bcrypt': BcryptIcon,
         'Nodemon': NodemonIcon,
         'Prisma': PrismaIcon,
@@ -155,7 +154,7 @@ export const backendServerSkills = [
     'Node.js',
     'Express.js',
     'RESTful APIs',
-    'JWT Authentication',
+    'JWT',
     'Bcrypt',
     'Nodemon',
     'Prisma'
@@ -194,7 +193,7 @@ export const toolsSkills = [
 
 export const cloudSkills = [
     'Netlify',
-    'PostgreSQL on Neon',
+    'Neon',
     'Render (Docker)'
 ];
 
@@ -213,8 +212,8 @@ export const skills = [
 
 // Projects Data
 export const ProjectMiniatures = [
-    Portfolio,
     Physiotherapist,
+    Portfolio,
     nativeMems,
     OrgenizerApp
 ];

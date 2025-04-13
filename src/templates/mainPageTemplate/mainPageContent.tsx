@@ -45,7 +45,7 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
 
     return (
         <MainTemplate>
-            <ContentTemplate refContent={refContent}>
+            <ContentTemplate ref={refContent}>
                 {children}
                 {content.map((item, i) => (
                     <Text

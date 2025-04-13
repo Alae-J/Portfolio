@@ -5,15 +5,16 @@ export const Wrapper = styled.div<WrapperProps>`
     top: 0;
     position: sticky;
     padding: 20px 0;
-    grid-column: 9 / 11;
+    grid-column: 10 / 13;
     grid-row: 1 / 2;
     align-self: start;
     height: 80px;
-    background: ${({ scrollbackground, theme }) =>
-        scrollbackground === true ? theme.colors.main : 'none'};
+    background: ${({ $scrollbackground, theme }) =>
+        $scrollbackground === true ? theme.colors.main : 'none'};
     z-index: 1;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 0 0 10px 10px;
+    margin-left: auto;
     @media (max-width: 1800px) {
         grid-column: 8 / 11;
     }
@@ -27,15 +28,16 @@ export const Wrapper = styled.div<WrapperProps>`
         position: fixed;
         justify-content: center;
         align-items: center;
+        max-width: unset;
     }
 `;
+
 
 export const IconWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-width: 250px;
     height: 100%;
     padding: 0 16px;
 `;

@@ -64,7 +64,7 @@ export const ContentWrapper = styled.div<DescriptionProps>`
     text-decoration: none;
     padding: 10px;
     font-size: ${({ theme }) => theme.fontSize.XS};
-    opacity: ${({ show }) => (show ? '100%' : 0)};
+    opacity: ${({ $show }) => ($show ? '100%' : 0)};
     font-family: ${({ theme }) => theme.fontFamily.mainFont};
     color: black;
     background: ${({ theme }) => theme.colors.content};
@@ -72,7 +72,7 @@ export const ContentWrapper = styled.div<DescriptionProps>`
     position: absolute;
     top: 150px;
     left: 0;
-    height: ${({ show }) => (show ? '250px' : 0)};
+    height: ${({ $show }) => ($show ? '250px' : 0)};
     width: 400px;
     transition: all 1s ease;
 
@@ -80,6 +80,6 @@ export const ContentWrapper = styled.div<DescriptionProps>`
         top: 0;
         width: 300px;
         font-size: ${({ theme }) => theme.fontSize.XS};
-        height: ${({ show }) => (show ? '300px' : 0)};
+        height: ${({ $show }) => ($show ? '300px' : 0)};
     }
 `;

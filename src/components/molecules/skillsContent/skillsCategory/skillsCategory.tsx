@@ -37,16 +37,16 @@ const SkillsCategory: FC<SkillsProps> = ({ $skill, $category, $refSkill }) => {
                     const Icon = iconsMap[item];
                     return (
                         <TextWrapper key={item}>
-                        <Text
-                            $center
-                            $fontSize={'XS'}
-                            $fontWeight={
-                                actualScreenWidth < 700 || window.innerWidth < 700 ? 'S' : 'M'
-                            }
-                            $margin={5}
-                            content={item}
-                        />{' '}
-                        {Icon && <SvgIcon Icon={Icon} $width={43} $height={43} />}
+                            <Text
+                                $center
+                                $fontSize={'XS'}
+                                $fontWeight={
+                                    actualScreenWidth < 700 || window.innerWidth < 700 ? 'S' : 'M'
+                                }
+                                $margin={5}
+                                content={item}
+                            />{' '}
+                            {Icon && <SvgIcon Icon={Icon} $width={43} $height={43} />}
                         </TextWrapper>
                     );
                 })}
