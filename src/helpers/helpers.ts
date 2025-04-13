@@ -20,10 +20,9 @@ import CVIcon from 'assets/navIcons/cv.svg?react';
 import ProjectIcon from 'assets/navIcons/project.svg?react';
 import SkillIcon from 'assets/navIcons/skill.svg?react';
 
-import nativeMems from 'assets/projects/HassanSimulation.png';
-import OrgenizerApp from 'assets/projects/OrganizerApp.png';
+import HassanSimul from 'assets/projects/HassanSimulation.png';
 import Portfolio from 'assets/projects/Portfolio.png';
-import Physiotherapist from 'assets/projects/Toki.png';
+import Toki from 'assets/projects/Toki.png';
 
 
 // Content Data for Main Page template
@@ -212,29 +211,25 @@ export const skills = [
 
 // Projects Data
 export const ProjectMiniatures = [
-    Physiotherapist,
+    Toki,
     Portfolio,
-    nativeMems,
-    OrgenizerApp
+    HassanSimul
 ];
 
 export const ProjectsUrl = [
     'https://github.com/Alae-J/Toki',
     'https://github.com/Alae-J/portfolio',
-    'https://github.com/Alae-J/Hassan-Tower-VR',
-    'https://github.com/Alae-J/JavaFX-Student-Advisor'
+    'https://github.com/Alae-J/Hassan-Tower-VR'
 ];
 
 export const ProjectTitles = [
     'Toki · Task Manager + Pomodoro',
     'My Developer Portfolio',
-    'Hassan Tower VR · Unity Simulation',
-    'Student Advisor · JavaFX Desktop App'
+    'Hassan Tower VR · Unity Simulation'
 ];
 
 export const ProjectDescription = [
     `A productivity-focused task manager featuring a fully working Pomodoro system, session stats, real-time timers, progress tracking, and a clean modular interface. Built from scratch with React, TypeScript, and Spring Boot.`,
     `My custom-designed developer portfolio showcasing skills, projects, and personality. Crafted with React, styled-components, animations, and a mobile-responsive layout. Emphasis on clean structure and user-centric design.`,
-    `A first-person Unity experience simulating the iconic Moroccan heritage site Hassan Tower. Includes atmospheric visuals, keyboard navigation, object interaction (pick/drop/read), and cultural storytelling.`,
-    `A desktop application helping students choose the ideal academic path. Users input grades and preferences, and receive tailored institution/major suggestions. Built using JavaFX and MySQL.`
+    `A third-person Unity 3D simulation of the Hassan Tower in Rabat - Morocco, created as part of a visual computing exam at INPT. Includes keyboard navigation, smooth camera controls, ambient lighting, desert-style visuals, and a culturally-inspired environment — blending tech with Moroccan heritage.`
 ];

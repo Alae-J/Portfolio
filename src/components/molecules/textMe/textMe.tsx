@@ -2,7 +2,7 @@ import { FC, useRef } from 'react';
 import { Wrapper } from './textMe.styles';
 import Text from 'components/atoms/text/text';
 import { StyledImage } from './textMe.styles';
-import PersonalImage from 'assets/personalImage/p.jpg';
+import PersonalImage from 'assets/personalImage/TransparentPersonalImage.png';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
