@@ -32,22 +32,28 @@ export const Wrapper = styled.div<WrapperProps>`
 
 export const IconWrapper = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     min-width: 250px;
     height: 100%;
+    padding: 0 16px;
+`;
+
+export const SocialIcons = styled.div`
+    display: flex;
+    gap: 25px;
+
+    @media (max-width: 580px) {
+        gap: 10px;
+    }
 `;
 
 export const StyledIcon = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: auto;
-    @media (max-width: 580px) {
-        justify-content: space-between;
-        height: 30px;
-        width: 30px;
-    }
+    height: 30px;
+    width: 30px;
 `;
+

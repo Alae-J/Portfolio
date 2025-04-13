@@ -3,24 +3,24 @@ import { Wrapper } from './textMe.styles';
 import Text from 'components/atoms/text/text';
 import { StyledImage } from './textMe.styles';
 import PersonalImage from 'assets/personalImage/p.jpg';
-// import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 const HelloTextContainer: FC = () => {
     const $refText = useRef(null);
-    // useEffect(() => {
-    //     if (!$refText.current) return;
-    //     const specialtextTimeline = gsap
-    //         .timeline({
-    //             delay: 0,
-    //         })
-    //         .from($refText.current, {
-    //             opacity: 0,
-    //             y: -10,
-    //             duration: 1,
-    //             delay: 1.9,
-    //         });
-    //     specialtextTimeline.play();
-    // }, []);
+
+    useGSAP(
+        () => {
+            gsap.from($refText.current, {
+                opacity: 0,
+                y: -10,
+                duration: 1,
+                delay: 1.9,
+                ease: 'power2.out',
+            });
+        },
+        { scope: $refText }
+    );
 
     return (
         <Wrapper ref={$refText}>

@@ -1,4 +1,3 @@
-import Face from 'assets/portalIcons/face.svg?react';
 import Github from 'assets/portalIcons/github.svg?react';
 import Linkedin from 'assets/portalIcons/linkedin.svg?react';
 import HtmlIcon from 'assets/techIcons/html-5.svg?react';
@@ -25,8 +24,8 @@ import nativeMems from 'assets/projects/nativeMems.png';
 import OrgenizerApp from 'assets/projects/OrganizerApp.png';
 import Portfolio from 'assets/projects/Portfolio.png';
 import Physiotherapist from 'assets/projects/fizjo.png';
-// Tailwind CSS',
-    //'Styled-Components'
+
+
 // Content Data for Main Page template
 export const developer = [
     'SALAM, I’m ALAE',

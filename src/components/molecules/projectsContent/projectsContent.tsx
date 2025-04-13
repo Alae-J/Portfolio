@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { ContentWrapper } from './projectsContent.styles';
-// import gsap from 'gsap';
-// import { Power0 } from 'gsap/all';
 import Project from './project/project';
+import { useGSAP } from '@gsap/react';
+import gsap, { Power0 } from 'gsap';
 
 const ProjectsContent = ({
     ProjectMiniatures,
@@ -19,25 +19,33 @@ const ProjectsContent = ({
     const refTab = useRef<React.RefObject<any>[]>(
         Array.from(ProjectMiniatures, () => React.createRef())
     );
-    // useEffect(() => {
-    //     if (!refTab.current) return;
-    //     const skillsTimeline = gsap.timeline({ repeat: 0, repeatDelay: 0 });
-    //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    //     ProjectMiniatures.map((_: any, i: number) =>
-    //         skillsTimeline.from(refTab.current[i].current, {
-    //             opacity: 0,
-    //             x: 0,
-    //             y: 10,
-    //             ease: Power0.easeOut,
-    //             duration: 0.2,
-    //             delay: 0.3,
-    //         })
-    //     );
-    //     skillsTimeline.play();
-    // }, [refTab, ProjectMiniatures]);
+
+    const containerRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const timeline = gsap.timeline({ repeat: 0, repeatDelay: 0 });
+
+            ProjectMiniatures.forEach((_, i) => {
+                const el = refTab.current[i]?.current;
+                if (el) {
+                    timeline.from(el, {
+                        opacity: 0,
+                        y: 10,
+                        ease: Power0.easeOut,
+                        duration: 0.3,
+                        delay: 0.2,
+                    });
+                }
+            });
+
+            timeline.play();
+        },
+        { scope: containerRef }
+    );
 
     return (
-        <ContentWrapper>
+        <ContentWrapper ref={containerRef}>
             {ProjectMiniatures.map((item, i) => (
                 <Project
                     refproject={refTab.current[i]}

@@ -8,9 +8,9 @@ import ContentTemplate from 'templates/contentTemplate/contentTemplate';
 import { MainPageTemplateProps } from './mainPageContent.types';
 import MainTemplate from 'templates/mainTemplate/mainTemplate';
 import SpecialTextContainer from 'components/molecules/quoteText/quoteText';
-// import gsap from 'gsap';
-// import { Power0 } from 'gsap';
 import EmailComponent from 'components/molecules/emailComponent/emailComponent';
+import { useGSAP } from '@gsap/react';
+import gsap, { Power0 } from 'gsap';
 
 const MainPageTemplate: FC<MainPageTemplateProps> = ({
     content,
@@ -20,28 +20,28 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
 }) => {
     const refContent = useRef(null);
     const refSpecialText = useRef(null);
-    // useEffect(() => {
-    //     if (!refContent.current) return;
-    
-    //     gsap.from(refContent.current, {
-    //         opacity: 0,
-    //         ease: Power0.easeOut,
-    //         duration: 1,
-    //         delay: 0.5
-    //     });
-    // }, []);
-    
-    // useEffect(() => {
-    //     if (!refSpecialText.current) return;
-    
-    //     gsap.from(refSpecialText.current, {
-    //         opacity: 0,
-    //         ease: Power0.easeOut,
-    //         duration: 1,
-    //         delay: 0.5
-    //     });
-    // }, []);
-    
+
+    useGSAP(() => {
+        if (refContent.current) {
+            gsap.from(refContent.current, {
+                opacity: 0,
+                ease: Power0.easeOut,
+                duration: 1,
+                delay: 0.5,
+            });
+        }
+    }, { scope: refContent });
+
+    useGSAP(() => {
+        if (refSpecialText.current) {
+            gsap.from(refSpecialText.current, {
+                opacity: 0,
+                ease: Power0.easeOut,
+                duration: 1,
+                delay: 0.5,
+            });
+        }
+    }, { scope: refSpecialText });
 
     return (
         <MainTemplate>
@@ -59,22 +59,17 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
                             item === 'Full Stack Developer · React & Spring Enthusiast' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
-                                ? true
-                                : false
                         }
                         $center={
                             item === 'Full Stack Developer · React & Spring Enthusiast' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
-                                ? true
-                                : false
-                            }
-                            $click={() => {
-                                if (item === 'Download CV') {
-                                    window.open('resume/cv1.pdf', '_black');
-                                }
-                            }
                         }
+                        $click={() => {
+                            if (item === 'Download CV') {
+                                window.open('resume/cv1.pdf', '_black');
+                            }
+                        }}
                     />
                 ))}
             </ContentTemplate>
