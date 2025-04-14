@@ -1,4 +1,4 @@
-# ✨ Alae Eddine Jahid — Developer Portfolio
+# ⚙️ Alae Eddine Jahid — Developer Portfolio
 
 Welcome to my personalized developer portfolio — a clean, structured, and responsive website showcasing who I am, what I build, and how I think.
 
@@ -8,7 +8,9 @@ Welcome to my personalized developer portfolio — a clean, structured, and resp
 
 ## 📄 Overview
 
-This portfolio reflects my developer identity — built using a base template, but **deeply refactored** and **modularized** to fit my standards. I focused on structured thinking, clarity of purpose, and frontend architecture inspired by Atomic Design.
+This portfolio reflects my developer identity — built using a base template, but **refactored** to fit my standards. I focused on structured thinking, clarity of purpose, and frontend architecture inspired by Atomic Design.
+
+🧠 **Note:** The primary focus of this project is not on visual design or content, but on the **clean, scalable file structure and architecture**. It's meant to reflect professional frontend habits — not just presentation.
 
 ---
 
@@ -48,7 +50,7 @@ src/
 
 ## 🌍 Live Demo
 
-> 🔗 Hosted at: [alae-jahid.vercel.app](https://alae-jahid.vercel.app)
+> 🔗 Hosted at: [alae-gijutsu.vercel.app](https://alae-gijutsu.vercel.app)
 
 Explore it on mobile, tablet, and desktop — it's made to be pixel-consistent across viewports.
 
@@ -78,8 +80,8 @@ npm run dev
 
 ### Requirements
 
-- Node.js >= 16
-- Vite (for optimal development speed)
+- Node.js
+- Vite
 
 ---
 
@@ -92,11 +94,10 @@ npm run dev
 
 ## 📲 Contact
 
-- 📧 Email: [alae.jahid.dev@gmail.com](mailto:alae.jahid.dev@gmail.com)
+- 📧 Email: [alae.jahid.dev@gmail.com](mailto:alaejahid8@gmail.com)
 - 🤝 [LinkedIn](https://linkedin.com/in/Alae-J)
 - 💻 [GitHub](https://github.com/Alae-J)
 
 ---
 
-技術 (Gijutsu) meets 美学 (Bigaku): Code meets aesthetics ⚙️
-
+*技術 (Gijutsu) meets 美学 (Bigaku): Code meets aesthetics ⚙️*
