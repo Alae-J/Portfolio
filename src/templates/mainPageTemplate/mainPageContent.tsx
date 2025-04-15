@@ -56,12 +56,12 @@ const MainPageTemplate: FC<MainPageTemplateProps> = ({
                         $fontSize={mainContentDataFontSize[i]}
                         $margin={10}
                         $background={
-                            item === 'Full Stack Developer · React & Spring Enthusiast' ||
+                            item === 'Full Stack Dev — TypeScript, Spring Boot & Me' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
                         }
                         $center={
-                            item === 'Full Stack Developer · React & Spring Enthusiast' ||
+                            item === 'Full Stack Dev — TypeScript, Spring Boot & Me' ||
                             item === 'Download CV' ||
                             item === '+212 7 02 08 45 35'
                         }

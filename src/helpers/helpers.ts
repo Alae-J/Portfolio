@@ -66,7 +66,7 @@ import Toki from 'assets/projects/Toki.png';
 export const developer = [
     'SALAM, I’m ALAE',
     'SOFTWARE ENGINEERING STUDENT',
-    'Full Stack Developer · React & Spring Enthusiast'
+    'Full Stack Dev — TypeScript, Spring Boot & Me'
 ];
 
 export const cv = ['Download CV'];
