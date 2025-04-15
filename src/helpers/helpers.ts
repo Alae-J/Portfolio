@@ -1,19 +1,56 @@
 import Github from 'assets/portalIcons/github.svg?react';
 import Linkedin from 'assets/portalIcons/linkedin.svg?react';
+
+// FRONTEND DEVELOPMENT
 import HtmlIcon from 'assets/techIcons/html-5.svg?react';
 import JsIcon from 'assets/techIcons/js.svg?react';
 import CssIcon from 'assets/techIcons/css.svg?react';
 import TypescriptIcon from 'assets/techIcons/typescript.svg?react';
+import ReactIcon from 'assets/techIcons/react.svg?react';
 import TailwindIcon from 'assets/techIcons/tailwind.svg?react';
 import StyledComponents from 'assets/techIcons/styledcomponents.svg?react';
+import GSAPIcon from 'assets/techIcons/gsap.svg?react';
+
+// BACKEND DEVELOPMENT
 import SpringIcon from 'assets/techIcons/springboot.svg?react';
 import NodeIcon from 'assets/techIcons/nodejs.svg?react';
 import ExpressIcon from 'assets/techIcons/expressjs.svg?react';
-import RestApiIcon from 'assets/techIcons/restfulapis.svg?react';
 import JwtIcon from 'assets/techIcons/jwt.svg?react';
-import BcryptIcon from 'assets/techIcons/bcrypt.svg?react';
-import NodemonIcon from 'assets/techIcons/nodemon.svg?react';
 import PrismaIcon from 'assets/techIcons/prisma.svg?react';
+
+// MOBILE DEVELOPMENT
+import FlutterIcon from 'assets/techIcons/flutter.svg?react';
+
+// DATABASE SYSTEMS
+import MySQLIcon from 'assets/techIcons/mysql.svg?react';
+import PostgreSQLIcon from 'assets/techIcons/postgresql.svg?react';
+import MongoDBIcon from 'assets/techIcons/mongodb.svg?react';
+import H2Icon from 'assets/techIcons/h2.svg?react';
+
+// GAME DEVELOPMENT
+import UnityIcon from 'assets/techIcons/unity.svg?react';
+
+// PROGRAMMING LANGUAGES
+import JavaIcon from 'assets/techIcons/java.svg?react';
+import PythonIcon from 'assets/techIcons/python.svg?react';
+import CIcon from 'assets/techIcons/c.svg?react';
+import CSharpIcon from 'assets/techIcons/c--.svg?react';
+import Dart from 'assets/techIcons/dart.svg?react';
+
+// TOOLS & DEV EXPERIENCE
+import GitIcon from 'assets/techIcons/git.svg?react';
+import NPMIcon from 'assets/techIcons/npm.svg?react';
+import VSCodeIcon from 'assets/techIcons/vscode.svg?react';
+import FigmaIcon from 'assets/techIcons/figma.svg?react';
+import LinuxIcon from 'assets/techIcons/linux.svg?react';
+import DavinciIcon from 'assets/techIcons/davinci.svg?react';
+
+// CLOUD & DEPLOYMENT
+import NetliflyIcon from 'assets/techIcons/netfly.svg?react';
+import NeonIcon from 'assets/techIcons/neon.svg?react';
+import DockerIcon from 'assets/techIcons/docker.svg?react';
+
+
 import AboutIcon from 'assets/navIcons/about.svg?react';
 import ContactIcon from 'assets/navIcons/contact.svg?react';
 import CVIcon from 'assets/navIcons/cv.svg?react';
@@ -93,83 +130,102 @@ export const pseudoCodeSection = ['<Section>', '</Section>'];
 
 // Skills data
 export const skillsCategories = [
-    'FRONTEND ESSENTIALS',
-    'REACT ECOSYSTEM',
+    'FRONTEND DEVELOPMENT',
+    'BACKEND DEVELOPMENT',
     'MOBILE DEVELOPMENT',
-    'BACKEND & SERVER',
-    'DATABASES',
+    'DATABASE SYSTEMS',
     'GAME DEVELOPMENT',
     'PROGRAMMING LANGUAGES',
     'TOOLS & DEV EXPERIENCE',
-    'DEPLOYMENT & CLOUD'
+    'CLOUD & DEPLOYMENT'
 ];
 
 export const techIconsMap: Record<string, Record<string, React.FC>> = {
-    'FRONTEND ESSENTIALS': {
+    'FRONTEND DEVELOPMENT': {
         'HTML5': HtmlIcon,
         'CSS3': CssIcon,
         'JavaScript (ES6+)': JsIcon,
         'TypeScript': TypescriptIcon,
+        'React': ReactIcon,
         'Tailwind CSS': TailwindIcon,
         'Styled-Components': StyledComponents,
+        'GSAP': GSAPIcon
     },
-    'BACKEND & SERVER': {
+    'BACKEND DEVELOPMENT': {
         'Spring Boot': SpringIcon,
         'Node.js': NodeIcon,
         'Express.js': ExpressIcon,
-        'RESTful APIs': RestApiIcon,
-        'JWT': JwtIcon,
-        'Bcrypt': BcryptIcon,
-        'Nodemon': NodemonIcon,
         'Prisma': PrismaIcon,
+        'JWT': JwtIcon
+    },
+    'MOBILE DEVELOPMENT': {
+        'Flutter': FlutterIcon
+    },
+    'DATABASE SYSTEMS': {
+        'MySQL': MySQLIcon,
+        'PostgreSQL': PostgreSQLIcon,
+        'MongoDB': MongoDBIcon,
+        'H2': H2Icon
+    },
+    'GAME DEVELOPMENT': {
+        'Unity': UnityIcon
+    },
+    'PROGRAMMING LANGUAGES': {
+        'Java': JavaIcon,
+        'JavaScript': JsIcon,
+        'TypeScript': TypescriptIcon,
+        'Python': PythonIcon,
+        'C': CIcon,
+        'C#': CSharpIcon,
+        'Dart': Dart
+    },
+    'TOOLS & DEV EXPERIENCE': {
+        'Git & GitHub': GitIcon,
+        'NPM': NPMIcon,
+        'VS Code': VSCodeIcon,
+        'Figma': FigmaIcon,
+        'Linux': LinuxIcon,
+        'DaVinci Resolve': DavinciIcon
+    },
+    'CLOUD & DEPLOYMENT': {
+        'Netlify': NetliflyIcon,
+        'Neon': NeonIcon,
+        'Render (Docker)': DockerIcon
     },
 };
 
-export const frontendEssentialsSkills = [
+export const frontendDevelopment = [
     'HTML5',
     'CSS3',
     'JavaScript (ES6+)',
     'TypeScript',
-    'Tailwind CSS',
-    'Styled-Components'
-];
-
-export const reactEcosystemSkills = [
     'React',
-    'React Router',
-    'React Hooks',
-    'LocalStorage',
-    'Axios',
-    'GSAP',
-    'Formik'
+    'Tailwind CSS',
+    'Styled-Components',
+    'GSAP'
 ];
 
-export const mobileDevelopmentSkills = [
-    'Flutter'
-];
-
-export const backendServerSkills = [
+export const backendDevelopment = [
     'Spring Boot',
     'Node.js',
     'Express.js',
-    'RESTful APIs',
-    'JWT',
-    'Bcrypt',
-    'Nodemon',
-    'Prisma'
+    'Prisma',
+    'JWT'
 ];
 
-export const databaseSkills = [
+export const mobileDevelopment = [
+    'Flutter'
+];
+
+export const databaseSystems = [
     'MySQL',
     'PostgreSQL',
     'MongoDB',
-    'H2',
-    'Mongoose'
+    'H2'
 ];
 
-export const gameDevSkills = [
-    'Unity',
-    'C#'
+export const gameDevelopment = [
+    'Unity'
 ];
 
 export const programmingLanguages = [
@@ -178,34 +234,34 @@ export const programmingLanguages = [
     'TypeScript',
     'Python',
     'C',
-    'C#'
+    'C#',
+    'Dart'
 ];
 
-export const toolsSkills = [
+export const toolsAndWorkflow = [
     'Git & GitHub',
     'NPM',
     'VS Code',
     'Figma',
-    'DaVinci Resolve',
-    'Linux'
+    'Linux',
+    'DaVinci Resolve'
 ];
 
-export const cloudSkills = [
+export const cloudAndDeployment = [
     'Netlify',
     'Neon',
     'Render (Docker)'
 ];
 
 export const skills = [
-    frontendEssentialsSkills,
-    reactEcosystemSkills,
-    mobileDevelopmentSkills,
-    backendServerSkills,
-    databaseSkills,
-    gameDevSkills,
+    frontendDevelopment,
+    backendDevelopment,
+    mobileDevelopment,
+    databaseSystems,
+    gameDevelopment,
     programmingLanguages,
-    toolsSkills,
-    cloudSkills
+    toolsAndWorkflow,
+    cloudAndDeployment
 ];
 
 

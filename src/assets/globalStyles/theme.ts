@@ -37,9 +37,10 @@ export const theme: StyleClosetTheme = {
         helper: '#4caf50',
     },
     fontFamily: {
-        mainFont: `Encode Sans SC`,
-        specialFont: 'Shadows Into Light',
+        mainFont: `'Space Grotesk', sans-serif`,
+        specialFont: `'Shadows Into Light', cursive`,
     },
+
     fontType: {
         serif: 'sans-serif',
         cursive: 'cursive',

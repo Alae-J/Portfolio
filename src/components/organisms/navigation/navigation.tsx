@@ -35,7 +35,20 @@ const Nav: FC = () => {
 
   const { store, setStore } = useContext(AppContext);
 
-
+  const closeNav = () => {
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setStore(prev => ({ ...prev, mobileNav: false }));
+      }
+    });
+  
+    tl.to(refContainer.current, {
+      x: '-300px',
+      opacity: 0.5,
+      duration: 0.3,
+      ease: Back.easeIn
+    });
+  };
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -66,10 +79,10 @@ const Nav: FC = () => {
         }
       }}
     >
-      <StyledIcon ref={refLogo} to="/">
+      <StyledIcon ref={refLogo} to="/" onClick={closeNav}>
         <SvgIcon Icon={LogoIcon} $height={80} $width={110} />
       </StyledIcon>
-      <NavList $refNav={refNav} />
+      <NavList $refNav={refNav} onLinkClick={closeNav} />
     </NavWrapper>
   );
 };

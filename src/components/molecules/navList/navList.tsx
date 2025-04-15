@@ -6,11 +6,11 @@ import { StyledLink } from './navList.styles';
 import { NavListProps } from './navList.types';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
 
-const NavList: FC<NavListProps> = ({ $refNav }) => {
+const NavList: FC<NavListProps> = ({ $refNav, onLinkClick }) => {
     return (
         <ListWrapper ref={$refNav}>
             {Navdata.map((item, i: number) => (
-                <StyledLink to={Url[i]} key={i}>
+                <StyledLink to={Url[i]} key={i} onClick={onLinkClick}>
                     <StyledIcon>
                         <SvgIcon
                             Icon={NavIcons[i]}
