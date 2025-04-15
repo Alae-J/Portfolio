@@ -3,5 +3,6 @@ export interface BurgerMenuProps {
 }
 
 export interface BurgerWrapperProps {
-    onClick: (event: React.MouseEvent<HTMLDivElement>) => void
+    onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+    $isOpen?: boolean;
 }

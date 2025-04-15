@@ -1,10 +1,14 @@
 import { FC } from 'react';
 import { BurgerWrapper, OuterLine, InnerLine } from './burgerMenu.styles';
-import { BurgerMenuProps } from './burgerMenu.types';
 
-const BurgerMenu: FC<BurgerMenuProps> = ({ onClick }) => {
+interface Props {
+    onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+    isOpen?: boolean;
+}
+
+const BurgerMenu: FC<Props> = ({ onClick, isOpen }) => {
     return (
-        <BurgerWrapper onClick={onClick}>
+        <BurgerWrapper onClick={onClick} $isOpen={isOpen}>
             <OuterLine />
             <InnerLine />
             <OuterLine />

@@ -2,36 +2,27 @@ import styled from 'styled-components';
 import { WrapperProps } from './socialNetworkIcons.types';
 
 export const Wrapper = styled.div<WrapperProps>`
+    position: absolute;
     top: 0;
-    position: sticky;
-    padding: 20px 0;
-    grid-column: 10 / 13;
-    grid-row: 1 / 2;
-    align-self: start;
+    right: calc(100vw - (100% - 150px));
+    padding: 5px 8px;
     height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background: ${({ $scrollbackground, theme }) =>
-        $scrollbackground === true ? theme.colors.main : 'none'};
-    z-index: 1;
-    width: 100%;
+        $scrollbackground ? theme.colors.main : 'none'};
+    z-index: 10;
     border-radius: 0 0 10px 10px;
-    margin-left: auto;
-    @media (max-width: 1800px) {
-        grid-column: 8 / 11;
-    }
-    @media (max-width: 1150px) {
-        grid-column: 6 / 11;
-    }
-    @media (max-width: 780px) {
-        grid-column: 4 / 11;
-    }
+
     @media (max-width: 580px) {
         position: fixed;
+        right: 0;
+        width: 100%;
         justify-content: center;
-        align-items: center;
-        max-width: unset;
+        margin-right: 0;
     }
 `;
-
 
 export const IconWrapper = styled.div`
     display: flex;

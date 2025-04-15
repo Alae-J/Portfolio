@@ -19,9 +19,9 @@ const SocialNetworkIcons: FC = () => {
     }, []);
 
     return (
-        <Wrapper $scrollbackground={scrollBackground} ref={$RefElement}>
+        <Wrapper $scrollbackground={scrollBackground} ref={$RefElement} $isNavOpen={store.mobileNav}>
             <IconWrapper>
-                <BurgerMenu onClick={() => setStore({ ...store, mobileNav: true })} />
+            <BurgerMenu onClick={() => setStore({ ...store, mobileNav: true })} isOpen={store.mobileNav} />
                 <SocialIcons>
                     {SocialNetworkIcon.map((item, i) => (
                         <StyledIcon href={SocialNetworkUrl[i]} key={i}>

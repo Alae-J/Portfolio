@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
 export const StyledCv = styled.img`
-    margin: 0;
-    height: 80%;
-    width: auto;
-    @media (max-width: 600px) {
-        max-width: 80vw;
-        height: auto;
-    }
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+
     @media (max-width: 1280px) {
-        height: 60%;
-        margin-bottom: 20px;
+        max-width: 80%;
+    }
+
+    @media (max-width: 600px) {
+        max-width: 90%;
     }
 `;
+

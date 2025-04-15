@@ -4,6 +4,7 @@ import LogoIcon from 'assets/logoIcon/logo.svg?react';
 import SvgIcon from 'components/atoms/svgIcon/svgIcon';
 import NavList from 'components/molecules/navList/navList';
 import AppContext from 'context';
+import { useLocation } from 'react-router-dom';
 
 import gsap from 'gsap';
 import { Back } from 'gsap/all';
@@ -67,8 +68,11 @@ const Nav: FC = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [store.mobileNav]);
-
+  const location = useLocation();
+  const isHomeActive = location.pathname === '/';
+  
   return (
+    
     <NavWrapper
       ref={refContainer}
       $mobile={store.mobileNav}
@@ -79,7 +83,15 @@ const Nav: FC = () => {
         }
       }}
     >
-      <StyledIcon ref={refLogo} to="/" onClick={closeNav}>
+      <StyledIcon
+        ref={refLogo}
+        to="/"
+        onClick={() => {
+          if (!isHomeActive) {
+            closeNav();
+          }
+        }}
+      >
         <SvgIcon Icon={LogoIcon} $height={80} $width={110} />
       </StyledIcon>
       <NavList $refNav={refNav} onLinkClick={closeNav} />
