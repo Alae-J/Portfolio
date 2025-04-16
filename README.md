@@ -94,7 +94,7 @@ npm run dev
 
 ## 📲 Contact
 
-- 📧 Email: [alae.jahid.dev@gmail.com](mailto:alaejahid8@gmail.com)
+- 📧 Email: [alaejahid8@gmail.com](mailto:alaejahid8@gmail.com)
 - 🤝 [LinkedIn](https://linkedin.com/in/Alae-J)
 - 💻 [GitHub](https://github.com/Alae-J)
 
